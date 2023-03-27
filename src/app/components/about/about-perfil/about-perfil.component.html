@@ -1,0 +1,34 @@
+<div class="row" *ngIf="isDone">
+    <div class="col-lg-6">
+        <div class="card" style="height: 100%;">
+            <div class="card-body" style="flex-wrap: wrap;display: flex;justify-content: space-around;align-content: stretch;" *ngFor="let profileimage of currentProfileImage;let indice = index;">
+                <img class="card-img-top" alt="Card image cap" src="{{profileimage.url}}" class="img-fluid" width="700" height="700" title="{{profileimage.name}}">
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6" *ngFor="let profile of currentProfile;let indice = index;">
+        <div class="container card" style="height: 100%;">
+            <div class="card-body" style="flex-wrap: wrap;display: flex;justify-content: space-around;align-content: space-around;">
+                <p class="card-text" style="text-align:justify;">{{profile.description}}</p>
+                <div class="container-fluid row">
+                    <strong>Mi Perfil:</strong>
+                    <ul style="text-align: left;">
+                        <li *ngFor="let profilefile of currentProfileFile;let indice = index;">{{profilefile.name}}: <a
+                            href="{{profilefile.url}}">{{profilefile.urlOptional}}</a>
+                        </li>
+                        <li>Número de teléfono: {{profile.number}}</li>
+                        <li>Email: {{profile.user.email}}</li>
+                        <li>Cumpleaños: {{profile.birthday}}</li>
+                    </ul>
+                </div>
+                <p class="card-text" style="text-align:justify;">Solo queda por decir que el estudio haciendo lo que les gusta siempre trae sus
+                    recompensas, a seguir adelante.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid row" *ngIf="!isDone" style="justify-content: center;">
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>

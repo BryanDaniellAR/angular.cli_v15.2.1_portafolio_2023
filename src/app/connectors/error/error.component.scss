@@ -1,0 +1,19 @@
+div.container-fluid{
+    div.card{
+        div.card-header{
+            h1{
+                margin: 0px;
+            }
+            color: white;
+            font-family: fantasy;
+            background-color: #006eff;
+            border-radius: 0px;
+        }
+        div.card-body{
+            height: 100%;
+            padding-bottom: 0px;
+        }
+        border: thick;
+    }
+    padding: 0px;
+}

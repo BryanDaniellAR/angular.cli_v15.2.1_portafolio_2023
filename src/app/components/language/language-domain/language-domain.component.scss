@@ -1,0 +1,23 @@
+div.container{
+    div.language{
+        a{
+            div.card{
+                img{
+                    height: 10rem;
+                    width: 180px;
+                }
+                div.card-body{
+                    padding:0px;
+                }
+                width: 100%;
+                margin-top: 20px;
+                padding: 5px;
+                align-items: center;
+                border: none;
+            }
+            text-decoration: none;
+            color:black;
+        }
+    }
+    display: inline-flex;
+}

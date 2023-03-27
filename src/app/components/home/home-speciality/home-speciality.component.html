@@ -1,0 +1,13 @@
+<div *ngIf="isDone">
+    <ul>
+        <li *ngFor="let profilefile of currentProfileFile;let indice = index;">{{profilefile.name}}</li>
+    </ul>
+</div>
+<div *ngIf="!isDone">
+    <ul>
+        <li>FrontEnd Developer</li>
+        <li>Backend Developer</li>
+        <li>Data Analyst</li>
+        <li>Mobile Developer</li>
+    </ul>
+</div>

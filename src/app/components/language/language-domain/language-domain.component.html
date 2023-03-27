@@ -1,0 +1,17 @@
+<div class="container row" *ngIf="isDone">
+    <div class="col-sm col-md language" *ngFor="let language of currentLanguage;let indice = index;">
+        <a *ngIf="language.usability.name=='language'"  href="{{language.urlOptional}}">
+            <div class="card">
+                <img src="{{language.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{language.name}}</h5>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+<div class="container row" *ngIf="!isDone" style="justify-content: center;">
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>

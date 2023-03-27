@@ -1,0 +1,115 @@
+<!--<div class="row" style="text-align: -webkit-center; place-content: center;">
+    <div class="col-lg-12 proyecto">
+        <div class="card text-center">
+            <div class="card-header">
+                Proyecto - Asistencia con Tecnología GPS
+            </div>
+            <div class="card-body">
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img class="img-fluid" src="https://bryanarrivasplata.com/assets/img/asistencia_gps.png" alt="...">
+                        <div class="carousel-caption d-none d-md-block text-carousel">
+                            <h5>Login Laravel/Flutter</h5>
+                            <p>En este proyecto se usó infraestructura de microservicios con tecnología Nodejs para Rest API, Flutter para el aplicativo móvil por su practicidad en multiplataforma y para administrarlo un backend con desarrollo Laravel.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img class="img-fluid" src="https://bryanarrivasplata.com/assets/img/asistencia_gps.png" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="img-fluid" src="https://bryanarrivasplata.com/assets/img/asistencia_gps.png" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+            <div class="card-footer text-muted">
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a class="btn btn-primary me-md-2" type="button" href="https://bryanarrivasplata.com/asistencia_gps/">Visit Backend of this proyect</a>
+                    <a class="btn btn-success" type="button">Download apk of this Proyect</a>
+                </div>
+            </div>
+          </div>
+    </div>
+    <span><br></span>
+    <div class="col-lg-12 proyecto">
+        <div class="card text-center">
+            <div class="card-header">
+                Proyecto - Backend WebSite
+            </div>
+            <div class="card-body">
+                <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                      </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img class="img-fluid" src="./../../../../assets/img/welcome/login.png" title="login">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="img-fluid" src="./../../../../assets/img/welcome/document-1.png" title="document-1">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="img-fluid" src="./../../../../assets/img/welcome/document-2.png" title="document-2">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="img-fluid" src="./../../../../assets/img/welcome/document-3.png" title="document-3">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="img-fluid" src="./../../../../assets/img/welcome/document-4.png" title="document-4">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="card-footer text-muted">
+              2 days ago
+            </div>
+          </div>
+    </div>
+</div>-->
+<div class="container row" *ngIf="isDone">
+  <div class="col-sm-12 col-md-12 col-lg-12 language" *ngFor="let portafolio of currentPortafolio;let indice = index;">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title">{{portafolio.name}}</h5>
+      </div>
+      <div class="card-body">
+        <iframe class="e2e-iframe-trusted-src" [src]="portafolio.url | safeUrl" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" loading="lazy" allowfullscreen></iframe>
+      </div>
+      <div class="card-footer">
+        <p>{{portafolio.description}}</p>
+        <a href="{{portafolio.urlOptional}}" class="btn btn-success">Visitar el proyecto</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container row" *ngIf="!isDone" style="justify-content: center;">
+  <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+  </div>
+</div>

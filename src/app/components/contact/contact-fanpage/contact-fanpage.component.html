@@ -1,0 +1,10 @@
+<div class="row fanpage" *ngIf="isDone">
+    <div class="btn-group">
+        <a *ngFor="let profilecontact of currentProfileContact;let indice = index;" href="{{profilecontact.url}}" type="button" class="{{profilecontact.description}}"></a>
+    </div>
+</div>
+<div class="row fanpage" *ngIf="!isDone" style="justify-content: center;">
+  <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
